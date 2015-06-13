@@ -104,11 +104,21 @@ format_posts <- function(l) {
         topline <- sprintf("\\subsection*{%s}\n", x$employer)
 
         roles <- lapply(x$roles, function(x) {
+
+            
             if ("end" %in% names(x)) {
-                with(x, sprintf("\\ind %s--%s.  %s.\n", start, end, title))
+                role_info <- with(x, sprintf("\\ind %s--%s.  %s.\n", start, end, title))
             } else {
-                with(x, sprintf("\\ind %s.  %s.\n", start, title))
+                role_info <- with(x, sprintf("\\ind %s.  %s.\n", start, title))
             }
+
+            if ("details" %in% names(x)) {
+                details <- paste0("\\item ", x$details, collapse="\n")
+                role_info <- paste0(role_info, "\\begin{list}{\\textbullet}{}\n", details, "\n\\end{list}\n")
+            }
+
+            return(role_info)
+            
         })
         
         c(list(topline), roles)
