@@ -61,7 +61,8 @@ sanitize <- function(l) {
 #' @param address a list of address lines.
 #' @return a character including lines breaks for TeX
 format_address <- function(address) {
-    top_lines <- paste0(address[1:3], collapse="\\\\")
+    line_ids <- grepl("line", (names(address)))
+    top_lines <- paste0(unlist(address[line_ids]), collapse="\\\\")
     postcode <- sprintf("\\vspace{-0.04in}\\addfontfeature{Numbers={Proportional, Lining}}%s", address$postcode)
     paste0(c(top_lines, postcode), collapse="\\\\")
 }
