@@ -174,6 +174,7 @@ generate_cv <- function(content, style, outdir="output") {
            
     ## Build the pdf
     message("Building the PDF...")
+    system2("rm", args="-rf `biber --cache`")
     commands <- c("xelatex", "biber", "xelatex", "xelatex")
     tex_file <- file_path_sans_ext(basename(content))
     setwd(outdir)
