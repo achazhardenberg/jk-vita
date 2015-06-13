@@ -7,9 +7,15 @@ posts:
       - start: 2009
         end: 2011
         title: Research Fellow and Team Leader, BP Urban Energy Systems project
+        details:
+          - "Designed and implemented"
       - start: 2011
         end: present
         title: Lecturer, Dept of Civil and Environmental Engineering
+        details:
+          - "Designed and implemented"
+          - "Teaching"
+          - "Line management"
   - employer: Institute of Industrial Science, University of Tokyo
     roles:
       - start: October 2010
