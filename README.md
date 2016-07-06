@@ -1,6 +1,6 @@
 # JK-Vita
 
-This is an R project for automatically building [my academic CV](http://www.imperial.ac.uk/people/j.keirstead).  It's based on the idea that content and style should be separate and that a person might want different CVs for different purposes.  Inspiration came from [Kieran Healy](https://github.com/kjhealy/kjh-vita) for the formatting of the CV itself and [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for the use of Biblatex to manage the publications list.
+This is an R project for automatically building [my academic CV](http://www.jameskeirstead.ca/blog/generating-an-academic-cv-with-r-and-yaml/).  It's based on the idea that content and style should be separate and that a person might want different CVs for different purposes.  Inspiration came from [Kieran Healy](https://github.com/kjhealy/kjh-vita) for the formatting of the CV itself and [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for the use of Biblatex to manage the publications list.
 
 ## Project layout
 
